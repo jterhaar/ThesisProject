@@ -1,0 +1,435 @@
+{
+    "allow_nans": false,
+    "attribution": "unknown",
+    "chunks": [
+        1,
+        9,
+        1,
+        535500
+    ],
+    "constant_fields": [
+        "cos_latitude",
+        "cos_longitude",
+        "sin_latitude",
+        "sin_longitude"
+    ],
+    "data_request": {
+        "area": null,
+        "grid": null,
+        "param_level": {},
+        "param_step": {}
+    },
+    "description": "No description provided.",
+    "dtype": "float32",
+    "end_date": "2020-01-07T18:00:00",
+    "ensemble_dimension": 1,
+    "field_shape": [
+        765,
+        700
+    ],
+    "flatten_grid": true,
+    "frequency": "6h",
+    "last_date": "2020-01-07 18:00:00",
+    "latest_write_timestamp": "2026-06-04T13:00:19.007934",
+    "licence": "unknown",
+    "missing_dates": [],
+    "order_by": [
+        "valid_datetime",
+        "param_level",
+        "number"
+    ],
+    "proj_string": null,
+    "provenance_load": {
+        "distribution_names": {},
+        "git_versions": {},
+        "module_versions": {
+            "anemoi.datasets": {
+                "source": {
+                    "url": "file:///usr/people/haar/ThesisProject/anemoi-datasets"
+                },
+                "version": "0.5.37.dev5+g0ded992f6"
+            },
+            "anemoi.transform": {
+                "version": "0.3.1"
+            },
+            "anemoi.utils": {
+                "version": "0.5.3"
+            },
+            "aniso8601": {
+                "version": "10.0.1"
+            },
+            "annotated_types": {
+                "version": "0.7.0"
+            },
+            "array_api_compat": {
+                "version": "1.14.0"
+            },
+            "asciitree": {
+                "version": "0.3.3"
+            },
+            "astropy": {
+                "version": "7.2.0"
+            },
+            "astropy_iers_data": {
+                "version": "0.2026.5.11.1.8.52"
+            },
+            "attrs": {
+                "version": "26.1.0"
+            },
+            "babel": {
+                "version": "2.18.0"
+            },
+            "cachetools": {
+                "version": "7.1.1"
+            },
+            "certifi": {
+                "version": "2026.4.22"
+            },
+            "cffi": {
+                "version": "2.0.0"
+            },
+            "cfgrib": {
+                "version": "0.9.15.1"
+            },
+            "cftime": {
+                "version": "1.6.5"
+            },
+            "charset_normalizer": {
+                "version": "3.4.7"
+            },
+            "cloudpickle": {
+                "version": "3.1.2"
+            },
+            "cycler": {
+                "version": "0.12.1"
+            },
+            "dask": {
+                "version": "2026.3.0"
+            },
+            "defusedxml": {
+                "version": "0.7.1"
+            },
+            "deprecated": {
+                "version": "1.3.1"
+            },
+            "deprecation": {
+                "version": "2.1.0"
+            },
+            "earthkit.data": {
+                "version": "0.19.4"
+            },
+            "earthkit.geo": {
+                "version": "0.5.2"
+            },
+            "earthkit.meteo": {
+                "version": "0.6.2"
+            },
+            "earthkit.utils": {
+                "version": "0.3.0"
+            },
+            "eccodes": {
+                "version": "2.47.0"
+            },
+            "eccodeslib": {
+                "version": "2.46.2.19"
+            },
+            "eckitlib": {
+                "version": "2.0.7.19"
+            },
+            "entrypoints": {
+                "version": "0.4"
+            },
+            "fasteners": {
+                "version": "0.20"
+            },
+            "findlibs": {
+                "version": "0.1.2"
+            },
+            "flexcache": {
+                "version": "0.3"
+            },
+            "flexparser": {
+                "version": "0.4"
+            },
+            "fsspec": {
+                "version": "2026.3.0"
+            },
+            "healpy": {
+                "version": "1.19.0"
+            },
+            "idna": {
+                "version": "3.15"
+            },
+            "jinja2": {
+                "version": "3.1.6"
+            },
+            "jsonschema": {
+                "version": "4.26.0"
+            },
+            "jsonschema_specifications": {
+                "version": "2025.9.1"
+            },
+            "kerchunk": {
+                "version": "0.2.7"
+            },
+            "kiwisolver": {
+                "version": "1.5.0"
+            },
+            "markupsafe": {
+                "version": "3.0.3"
+            },
+            "matplotlib": {
+                "version": "3.10.9"
+            },
+            "multiurl": {
+                "version": "0.3.7"
+            },
+            "netCDF4": {
+                "version": "1.7.4"
+            },
+            "numcodecs": {
+                "version": "0.15.1"
+            },
+            "numpy": {
+                "version": "2.4.4"
+            },
+            "odclib": {
+                "version": "1.6.3.19"
+            },
+            "packaging": {
+                "version": "26.2"
+            },
+            "pandas": {
+                "version": "2.3.3"
+            },
+            "pint": {
+                "version": "0.25.3"
+            },
+            "planetary_computer": {
+                "version": "1.0.0"
+            },
+            "platformdirs": {
+                "version": "4.9.6"
+            },
+            "pycparser": {
+                "version": "3.0"
+            },
+            "pydantic": {
+                "version": "2.13.4"
+            },
+            "pydantic_core": {
+                "version": "2.46.4"
+            },
+            "pyparsing": {
+                "version": "3.3.2"
+            },
+            "pyproj": {
+                "version": "3.7.2"
+            },
+            "pystac": {
+                "version": "1.14.3"
+            },
+            "pystac_client": {
+                "version": "0.9.0"
+            },
+            "pytz": {
+                "version": "2026.2"
+            },
+            "referencing": {
+                "version": "0.37.0"
+            },
+            "requests": {
+                "version": "2.34.0"
+            },
+            "rich": {
+                "version": "15.0.0"
+            },
+            "ruamel.yaml": {
+                "version": "0.19.1"
+            },
+            "scipy": {
+                "version": "1.17.1"
+            },
+            "semantic_version": {
+                "version": "2.10.0"
+            },
+            "six": {
+                "version": "1.17.0"
+            },
+            "toolz": {
+                "version": "1.1.0"
+            },
+            "tqdm": {
+                "version": "4.67.3"
+            },
+            "typing_extensions": {
+                "version": "4.15.0"
+            },
+            "typing_inspection": {
+                "version": "0.4.2"
+            },
+            "urllib3": {
+                "version": "2.7.0"
+            },
+            "wrapt": {
+                "version": "2.1.2"
+            },
+            "xarray": {
+                "version": "2026.4.0"
+            },
+            "zarr": {
+                "version": "2.18.7"
+            }
+        },
+        "python": "3.13.13",
+        "time": "2026-06-04T12:59:34.142077"
+    },
+    "recipe": {
+        "additions": null,
+        "attribution": "unknown",
+        "build": {
+            "additions": false,
+            "allow_nans": false,
+            "env": {},
+            "group_by": "monthly",
+            "remapping": {
+                "param_level": "{param}_{levelist}"
+            },
+            "use_grib_paramid": false,
+            "variable_naming": "{param}_{levelist}"
+        },
+        "data_sources": null,
+        "dates": {
+            "end": "2020-01-07T23:00:00",
+            "frequency": "PT6H",
+            "missing": [],
+            "start": "2020-01-01T00:00:00"
+        },
+        "description": "No description provided.",
+        "env": null,
+        "input": {
+            "join": [
+                {
+                    "pipe": [
+                        {
+                            "netcdf": {
+                                "path": "/.../RAD_NL25_RAC_MFBS_06H_{date:strftime(%Y%m%d%H%M)}.nc"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "forcings": {
+                        "param": [
+                            "cos_latitude",
+                            "cos_longitude",
+                            "sin_latitude",
+                            "sin_longitude",
+                            "cos_julian_day",
+                            "cos_local_time",
+                            "sin_julian_day",
+                            "sin_local_time"
+                        ],
+                        "template": "${input.join.0.pipe.0.netcdf}"
+                    }
+                }
+            ]
+        },
+        "licence": "unknown",
+        "output": {
+            "chunking": {
+                "dates": 1,
+                "ensembles": 1
+            },
+            "dtype": "float32",
+            "ensemble_dimension": 2,
+            "flatten_grid": true,
+            "format": "gridded",
+            "order_by": [
+                "valid_datetime",
+                "param_level",
+                "number"
+            ],
+            "remapping": null,
+            "sanitise": true
+        },
+        "statistics": {
+            "allow_nans": null,
+            "end": null,
+            "start": null,
+            "tendencies": true
+        }
+    },
+    "remapping": {
+        "param_level": "{param}_{levelist}"
+    },
+    "resolution": null,
+    "shape": [
+        28,
+        9,
+        1,
+        535500
+    ],
+    "start_date": "2020-01-01T00:00:00",
+    "statistics_end_date": "2020-01-06T06:00:00",
+    "statistics_start_date": "2020-01-01T00:00:00",
+    "total_number_of_files": 67,
+    "total_size": 149651835,
+    "uuid": "f44ef226-53d4-422c-a4e9-e4f2df1c4a37",
+    "variables": [
+        "cos_julian_day",
+        "cos_latitude",
+        "cos_local_time",
+        "cos_longitude",
+        "sin_julian_day",
+        "sin_latitude",
+        "sin_local_time",
+        "sin_longitude",
+        "tp"
+    ],
+    "variables_metadata": {
+        "cos_julian_day": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "cos_latitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "cos_local_time": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "cos_longitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "sin_julian_day": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "sin_latitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "sin_local_time": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "sin_longitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "tp": {
+            "mars": {
+                "date": 20200101,
+                "param": "tp",
+                "step": 0,
+                "time": 0,
+                "valid_datetime": "2020-01-01T00:00:00",
+                "variable": "tp"
+            }
+        }
+    },
+    "version": "0.15"
+}

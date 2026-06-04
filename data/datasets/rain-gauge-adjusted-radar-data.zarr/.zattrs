@@ -1,0 +1,171 @@
+{
+    "_recipe": "{\"description\":\"No description provided.\",\"licence\":\"unknown\",\"attribution\":\"unknown\",\"dates\":{\"start\":\"2020-01-01T00:00:00\",\"end\":\"2023-12-31T23:00:00\",\"frequency\":\"PT6H\",\"missing\":[]},\"input\":{\"join\":[{\"pipe\":[{\"netcdf\":{\"path\":\"/nobackup/users/haar/radar_data/MFBS/6H20-23-reprojected/{date:strftime(%Y/%m)}/RAD_NL25_RAC_MFBS_06H_{date:strftime(%Y%m%d%H%M)}.nc\"}}]},{\"forcings\":{\"template\":\"${input.join.0.pipe.0.netcdf}\",\"param\":[\"cos_latitude\",\"cos_longitude\",\"sin_latitude\",\"sin_longitude\",\"cos_julian_day\",\"cos_local_time\",\"sin_julian_day\",\"sin_local_time\"]}}]},\"data_sources\":null,\"output\":{\"dtype\":\"float32\",\"remapping\":null,\"sanitise\":true,\"format\":\"gridded\",\"flatten_grid\":true,\"order_by\":[\"valid_datetime\",\"param_level\",\"number\"],\"chunking\":{\"dates\":1,\"ensembles\":1},\"ensemble_dimension\":2},\"build\":{\"use_grib_paramid\":false,\"allow_nans\":false,\"variable_naming\":\"{param}_{levelist}\",\"group_by\":\"monthly\",\"additions\":false,\"env\":{},\"remapping\":{\"param_level\":\"{param}_{levelist}\"}},\"additions\":null,\"statistics\":{\"start\":null,\"end\":null,\"tendencies\":true,\"allow_nans\":null},\"env\":null}",
+    "allow_nans": false,
+    "attribution": "unknown",
+    "data_request": {
+        "area": null,
+        "grid": null,
+        "param_level": {},
+        "param_step": {}
+    },
+    "description": "No description provided.",
+    "dtype": "float32",
+    "end_date": "2023-12-31T18:00:00",
+    "ensemble_dimension": 1,
+    "field_shape": [
+        765,
+        700
+    ],
+    "flatten_grid": true,
+    "frequency": "6h",
+    "last_date": "2023-12-31 18:00:00",
+    "latest_write_timestamp": "2026-06-04T13:44:42.574332",
+    "licence": "unknown",
+    "missing_dates": [],
+    "order_by": [
+        "valid_datetime",
+        "param_level",
+        "number"
+    ],
+    "proj_string": null,
+    "recipe": {
+        "additions": null,
+        "attribution": "unknown",
+        "build": {
+            "additions": false,
+            "allow_nans": false,
+            "env": {},
+            "group_by": "monthly",
+            "remapping": {
+                "param_level": "{param}_{levelist}"
+            },
+            "use_grib_paramid": false,
+            "variable_naming": "{param}_{levelist}"
+        },
+        "data_sources": null,
+        "dates": {
+            "end": "2023-12-31T23:00:00",
+            "frequency": "PT6H",
+            "missing": [],
+            "start": "2020-01-01T00:00:00"
+        },
+        "description": "No description provided.",
+        "env": null,
+        "input": {
+            "join": [
+                {
+                    "pipe": [
+                        {
+                            "netcdf": {
+                                "path": "/.../RAD_NL25_RAC_MFBS_06H_{date:strftime(%Y%m%d%H%M)}.nc"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "forcings": {
+                        "param": [
+                            "cos_latitude",
+                            "cos_longitude",
+                            "sin_latitude",
+                            "sin_longitude",
+                            "cos_julian_day",
+                            "cos_local_time",
+                            "sin_julian_day",
+                            "sin_local_time"
+                        ],
+                        "template": "${input.join.0.pipe.0.netcdf}"
+                    }
+                }
+            ]
+        },
+        "licence": "unknown",
+        "output": {
+            "chunking": {
+                "dates": 1,
+                "ensembles": 1
+            },
+            "dtype": "float32",
+            "ensemble_dimension": 2,
+            "flatten_grid": true,
+            "format": "gridded",
+            "order_by": [
+                "valid_datetime",
+                "param_level",
+                "number"
+            ],
+            "remapping": null,
+            "sanitise": true
+        },
+        "statistics": {
+            "allow_nans": null,
+            "end": null,
+            "start": null,
+            "tendencies": true
+        }
+    },
+    "remapping": {
+        "param_level": "{param}_{levelist}"
+    },
+    "resolution": null,
+    "start_date": "2020-01-01T00:00:00",
+    "statistics_end_date": "2023-03-14T12:00:00",
+    "statistics_start_date": "2020-01-01T00:00:00",
+    "uuid": "bc7da92f-e7e6-4152-bbcd-f72fa356672d",
+    "variables": [
+        "cos_julian_day",
+        "cos_latitude",
+        "cos_local_time",
+        "cos_longitude",
+        "sin_julian_day",
+        "sin_latitude",
+        "sin_local_time",
+        "sin_longitude",
+        "tp"
+    ],
+    "variables_metadata": {
+        "cos_julian_day": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "cos_latitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "cos_local_time": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "cos_longitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "sin_julian_day": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "sin_latitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "sin_local_time": {
+            "computed_forcing": true,
+            "constant_in_time": false
+        },
+        "sin_longitude": {
+            "computed_forcing": true,
+            "constant_in_time": true
+        },
+        "tp": {
+            "mars": {
+                "date": 20200101,
+                "param": "tp",
+                "step": 0,
+                "time": 0,
+                "valid_datetime": "2020-01-01T00:00:00",
+                "variable": "tp"
+            }
+        }
+    },
+    "version": "0.15"
+}

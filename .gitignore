@@ -1,0 +1,53 @@
+# =========================
+# Anemoi datasets
+# =========================
+anemoi-datasets/
+**/anemoi-datasets/
+
+# =========================
+# Python virtual environments
+# =========================
+.venv/
+venv/
+ENV/
+env/
+.env/
+
+# =========================
+# Python cache
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Jupyter
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# IDEs
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Data artifacts (optional but common for ML pipelines)
+# =========================
+*.zarr/
+*.nc
+*.parquet
+*.h5
+*.hdf5
