@@ -7,7 +7,7 @@ input:
   join:
   - pipe:
     - netcdf:
-        path: /nobackup/users/haar/radar_data/MFBS/6H20-23-reprojected/{date:strftime(%Y/%m)}/RAD_NL25_RAC_MFBS_06H_{date:strftime(%Y%m%d%H%M)}.nc
+        path: /nobackup/users/haar/radar_data/MFBS/6H20-23-final/{date:strftime(%Y/%m)}/RAD_NL25_RAC_MFBS_06H_{date:strftime(%Y%m%d%H%M)}.nc
   - forcings:
       template: ${input.join.0.pipe.0.netcdf}
       param:
