@@ -50,20 +50,20 @@ current = start_date
 
 while current <= end_date:
 
-    for window_start_hour in [0, 6, 12, 18]:
+    # window ends are 06:00, 12:00, 18:00, and 00:00 of the *next* day
+    for window_end_hour in [6, 12, 18, 24]:
 
-        window_start = current.replace(hour=window_start_hour)
+        window_end = current + timedelta(hours=window_end_hour)
 
+        # the 6 one-hour files whose START times fall in
+        # [window_end - 6h, window_end - 1h], i.e. the 6 hours BEFORE window_end
         files = [
             base / t.strftime('%Y/%m') /
             f"{prefix_in}{t.strftime('%Y%m%d%H%M')}.nc"
-            for t in (window_start + timedelta(hours=h) for h in range(6))
+            for t in (window_end - timedelta(hours=h) for h in range(6, 0, -1))
         ]
 
         try:
-            # -----------------------------
-            # accumulate safely (NO open leaks)
-            # -----------------------------
             accum = None
             ds0 = None
 
@@ -84,38 +84,29 @@ while current <= end_date:
                     else:
                         accum = accum + data
 
-            # -----------------------------
-            # lat/lon grid (from first file only)
-            # -----------------------------
             with xr.open_dataset(files[0]) as ds_ref:
                 latitude, longitude = get_latlon(ds_ref)
 
                 out = accum.to_dataset(name=var_out)
 
-                # metadata
                 out[var_out].attrs = ds_ref[var_in].attrs
                 out.attrs = ds_ref.attrs
 
-                # copy static variables if present
                 for v in ["projection", "geographic", "product"]:
                     if v in ds_ref:
                         out[v] = ds_ref[v]
 
-                # coords
                 out = out.assign_coords(
-                    time=window_start,
+                    time=window_end,
                     latitude=(("y", "x"), latitude),
                     longitude=(("y", "x"), longitude),
                 )
 
-            # -----------------------------
-            # output path
-            # -----------------------------
-            out_path = out_base / window_start.strftime('%Y/%m')
+            out_path = out_base / window_end.strftime('%Y/%m')
             out_path.mkdir(parents=True, exist_ok=True)
 
             out_file = out_path / (
-                f"{prefix_out}{window_start.strftime('%Y%m%d%H%M')}.nc"
+                f"{prefix_out}{window_end.strftime('%Y%m%d%H%M')}.nc"
             )
 
             out.to_netcdf(out_file)
@@ -123,8 +114,8 @@ while current <= end_date:
             print(f"Written: {out_file.name}")
 
         except Exception as e:
-            print(f"Error at {window_start}: {e}")
-            errors.append(window_start)
+            print(f"Error at {window_end}: {e}")
+            errors.append(window_end)
 
     current += timedelta(days=1)
 

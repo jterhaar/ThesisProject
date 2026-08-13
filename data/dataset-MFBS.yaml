@@ -1,5 +1,5 @@
 dates:
-  start: 2020-01-01T00:00:00
+  start: 2020-09-01T00:00:00
   end: 2023-12-31T23:00:00
   frequency: 6h
 
@@ -19,4 +19,3 @@ input:
       - cos_local_time
       - sin_julian_day
       - sin_local_time
-
